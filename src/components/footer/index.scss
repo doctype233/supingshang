@@ -1,0 +1,44 @@
+#footer{
+    margin:50px 0;
+    position: relative;
+    .footer-bg{
+        width: 100%;
+        height: 800px;
+    }
+    .footer-title{
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+    .left-img{
+        position: absolute;
+        bottom: 100px;
+        left: 110px;
+    }
+    h1,h4{
+        text-align: center; 
+        font-weight: 400;
+     }
+     h4{
+         color:#fff;
+     }
+    .right-img{
+        position: absolute;
+        right: 100px;
+        bottom: 150px;
+        width: 50%;
+        padding:10px;
+        img{
+            width: 100%;
+        }
+    }
+    .footer-content{
+        padding: 40px;
+        position: absolute;
+        top: 0;
+        color: #fff;
+        p{
+            line-height: 38px;
+        }
+    }
+}

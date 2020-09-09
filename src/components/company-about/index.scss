@@ -1,0 +1,27 @@
+#company-about{
+    position: relative;
+    overflow: hidden;
+    h1,h4{
+       text-align: center; 
+       font-weight: 400;
+    }
+    h4{
+        color:hsl(0, 0%, 35%);
+    }
+    .about_content{
+        text-align: center;
+    }
+    #company-about-child{
+        position: absolute;
+        transition: bottom 1s;
+        -moz-transition: bottom 1s; /* Firefox 4 */
+        -webkit-transition: bottom 1s; /* Safari 和 Chrome */
+        -o-transition: bottom 1s; 
+        .about-pic{
+            height: 340px;
+            margin: 0 auto;
+        }
+    }
+}
+
+

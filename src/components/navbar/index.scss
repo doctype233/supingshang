@@ -1,0 +1,32 @@
+
+  #header {
+    background-color: transparent;
+    .logo {
+      width: 120px;
+      height: 100%;
+      margin: 16px 24px 16px 24px;
+      float: left;
+      img{
+        width: 100%;
+      }
+    }
+    .ant-menu{
+      background-color: transparent;
+    }
+    .header-menu{
+      padding-top: 16px;
+      transition: background-color .5s;
+      li{
+        background-color:transparent ;
+        a{
+        text-decoration: none;
+
+        }
+      }
+    }
+  }
+  .hide-bg{
+    background-color: transparent;
+  }
+ 
+  

@@ -1,0 +1,34 @@
+#foot-info{
+    padding:50px;
+    background-color: #000;
+    .foot-head{
+        
+        #foot-menu{
+            background-color: #000;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    .divider{
+        height: 1px;
+        width: 100%;
+        border-top: 0.5px solid ;
+    }
+    .sub{
+        padding-top: 40px;
+    }
+    .subtitle{
+        font-size: 14px;
+        color: #666666;
+        margin: 0;
+        padding: 0;
+    }
+    .sub-right{
+        width: 330px;
+        img,div{
+            display: inline-block;
+        }
+        
+    }
+}

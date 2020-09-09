@@ -1,0 +1,28 @@
+// .ant-carousel .slick-dots{
+//     position: absolute;
+//     top:unset;
+//     li button{
+//         height:3px;
+//         background-color: rgba(255,255,255,.3);
+//     }
+//     li.slick-active button{
+//         background-color:#fff;
+//     }
+// }
+#banner{
+    margin-bottom: 50px;
+    .carousel{
+        img{
+            height: 100%;
+        }
+    }
+}
+#company-about{
+    padding:50px 0;
+}
+.child-hidden{
+    bottom:-300px;
+}
+.child-show{
+    bottom:50px;
+}
