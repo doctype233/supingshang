@@ -5,24 +5,24 @@ import React from 'react';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import ProductPage from './pages/product/index';
 import Home from './pages/home/index';
-
+import MobileProduct from './pages/mobile/product';
+import PageNavbar from './components/navbar';
 
 class Routes extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    
     render() {
         const {
             location,
         } = this.props;
 
         return (
-            <Switch
+           <div>
+               <PageNavbar />
+                <Switch
                 location={location}
             >
-                <Route path='/index' component={Home} />
-                <Route path='/product' component={ProductPage} />
-                <Redirect path="/" to="/index" />
+                <Route path='/pc/index' component={Home} />
+                <Route path='/pc/product' component={ProductPage} />
                 { /* 404 */}
                 {/* <Route
                     render={ () => (
@@ -31,6 +31,7 @@ class Routes extends React.Component {
                 /> */}
                 
             </Switch>
+           </div>
         );
     }
 }

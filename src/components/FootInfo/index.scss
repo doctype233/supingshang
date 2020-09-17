@@ -25,9 +25,13 @@
         padding: 0;
     }
     .sub-right{
-        width: 330px;
         img,div{
             display: inline-block;
+
+        }
+        img{
+            width: 145px;
+            height: 145px;
         }
         
     }

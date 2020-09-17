@@ -1,4 +1,41 @@
 const company_about="苏品尚是国家商标局认证商标，归于苏品尚（苏州）绿色农业发展有限公司，总公司位于苏州，在苏州、扬州均设有大规模养殖基地，集养殖、销售、售后于一体，致力打造全国一流的大闸蟹供应平台。祖辈传承三十年的大闸蟹的养殖与销售经验，创立养殖围网、沿江沿湖滩涂、阳澄湖水系等原生态养殖，拥有全面的技术生态专业的大闸蟹养殖技术，是政府大力扶持的绿色农业企业。";
 const group_appreciation='苏品尚比客户更在意产品的品质，苏品尚只选取当天捕捞的精品蟹，由专人调减，杜绝断脚蟹、死蟹、中气不足的蟹，每一份产品的快递都经过专业包装，顺丰大闸蟹专运，对大闸蟹的新鲜提供绝对保障，确保只只精品，上桌只只满意。'
 const footer_content='苏品尚坚持纯天然饵料投喂，严格把控：饲料必须新鲜适口、植物性动物性配合饲料严格搭配。动物性饲料精选新鲜小只杂鱼、小虾、河蚌、螺蛳等。 植物性饲料有玉米、小麦、南瓜、水草、地瓜等。 配合饲料是采取科学配方将植物性饲料和动物性饲料以及矿物质、维生素等添加剂加工制成的颗粒饲料，具有营养全面的特点，并且都是大闸蟹喜食的天然食物，从源头上保证螃蟹的自然、无害，零添加。';
-export {company_about,group_appreciation,footer_content};
+const product_list=[{
+    id:"0",
+    male:3.5,
+    female:2.5,
+    price1:428,
+    price2:498
+},{
+    id:"1",
+    male:4,
+    female:3,
+    price1:568,
+    price2:698
+},{
+    id:"2",
+    male:4.5,
+    female:3.5,
+    price1:658,
+    price2:798
+},{
+    id:"3",
+    male:5,
+    female:4,
+    price1:828,
+    price2:998
+},{
+    id:"4",
+    male:5.5,
+    female:4.5,
+    price1:1058,
+    price2:1288
+},{
+    id:"5",
+    male:6,
+    female:5,
+    price1:1588,
+    price2:1988
+}];
+export {company_about,group_appreciation,footer_content,product_list};

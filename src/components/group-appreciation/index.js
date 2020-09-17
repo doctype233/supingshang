@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Col, Typography } from 'antd';
 import './index.scss';
-import $ from 'jquery';
 import { group_appreciation } from '../../utils/utils'; //段落文本
 
 import img1 from '../../assets/images/appre_img1.png';

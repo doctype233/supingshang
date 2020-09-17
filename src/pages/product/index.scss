@@ -1,31 +1,149 @@
-#banner{
+
+.dzx-list{
+    margin-top: 50px;
+    height: 550px;
     position: relative;
-    .banner-title{
-        width:250px;
-        position: absolute;
-        top:50%;
-        left: 10%;
+    padding-top: 20px;
+    .con{
+        width: 836px;
+        height: 460px;
+        background: url('../../assets/images/bg-11.png') no-repeat;
+        margin: 0 auto 35px;
         display: flex;
-        justify-content:space-around;
-        h4{
-            line-height: 47px;
-            color: #666666;
-            margin: 0;
-            font-weight: 300;
-            margin-left: 20px;
+        position: relative;
+        .left{
+            width: 360px;
+            position: relative;
+            z-index: 10;
+            .top{
+                height: 60px;
+                line-height: 60px;
+                display: flex;
+                justify-content: flex-end;
+                span{
+                    position: relative;
+                    cursor: pointer;
+                    font-size: 19px;
+                    font-weight: 700;
+                    float: left\9;
+                    width: 180px;
+                    text-align: center;
+                    background: #d7b17d;
+                    background: -moz-linear-gradient(top,#d7b17d 0%,#f9e2ae 100%);
+                    background: -webkit-linear-gradient(top,#d7b17d 0%,#f9e2ae 100%);
+                    background: linear-gradient(to bottom,#d7b17d 0%,#f9e2ae 100%);
+                    &.cur{
+                        border-radius: 20px 20px 0 0;
+                        background: #c71432;
+                        color: #fff;
+                    }
+                }
+            }
+            .active-1 .span2 {
+                border-radius: 20px 0 0 20px;
+            }
+            .active-2 .span1 {
+                border-radius: 20px 20px 20px 0;
+            }
+        }
+        .right{
+            width: 720px;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            .li {
+                width: 239px;
+                margin-right: 1px;
+            }
+            .tit {
+                height: 60px;
+                line-height: 60px;
+                margin-bottom: 20px;
+                padding-right: 15px;
+                font-size: 20px;
+                text-align: right;
+            }
+            img{
+                vertical-align: middle;
+            }
+            .dd {
+                height: 50px;
+                line-height: 50px;
+                text-align: right;
+                padding-right: 40px;
+                position: relative;
+                display: block;
+                .n{
+                    position: relative;
+                    font-weight: 800;
+                    em {
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .n{
+                font-family: 'Oswald',Arial,SimSun;
+                font-size: 24px;
+                color: #444;
+            }
+            a{
+                color: #111;
+                text-decoration: none;
+            }
         }
     }
-   
-}
-.product-list{
-    padding: 50px;
-    .product{
-        width: 330px;
-        height: 200px;
+    .tips-box {
+        display: none;
+        transition: all .3s ease;
+        position: absolute;
+        width: 886px;
+        height: 50px;
+        border: 4px solid #eac596;
+        top:76px;
+        left: -24px;
+        border-radius: 10px;
     }
-    &>div{
-        text-align: center;
-        margin-bottom: 20px;
+    .li-list{
+        color: #fff;
+        margin-top: 20px;
+        font-size: 14px;
+        ul{
+            text-decoration: none;
+            margin:0;
+            padding: 0;
+            li{
+                height: 50px;
+                margin: 0;
+                line-height: 50px;
+                padding-left: 40px;
+                font-family: 'Oswald',Arial,SimSun;
+                display: flex;
+                align-items: center;
+            }
+        }
+        .xx {
+            background: url('../../assets/images/icon-xx-b.png') no-repeat 0 50%;
+            padding-left: 30px;
+            display: inline-flex;
+            align-items: center;
+           
+        }
+        em {
+            font-size: 16px;
+            margin: 0 5px;
+        }
+        b {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        .cx {
+            background: url("../../assets/images/icon-cx-b.png") no-repeat 0 50%;
+            padding-left: 30px;
+            display: inline-flex;
+            align-items: center;
+        }
 
     }
 }
