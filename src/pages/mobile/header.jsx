@@ -32,12 +32,12 @@ class MHeader extends React.Component {
     }
     render() {
         const { collapsed,open } = this.state;
-        const {bg}=this.props;
+        const {bg,nobag}=this.props;
         return (
             <div>
                 <div id='m-header' style={bg?{background:bg}:{background:'transparent'}}>
                     <div id='headerList' className={collapsed ? "open" : ''} onClick={this.toggleCollapsed}></div>
-                    <div className='shopping-cart' onClick={this.toggleOpen}><img src={shopping} alt='shopping-cart' width={23} /></div>
+                    {nobag?null:<div className='shopping-cart' onClick={this.toggleOpen}><img src={shopping} alt='shopping-cart' width={23} /></div>}
                 </div>
                 <div className={`menu-root ${collapsed ? "slide" : ''}`}>
                     <Menu
@@ -51,7 +51,7 @@ class MHeader extends React.Component {
                             <Link to='/mobile/list'>产品选购</Link>
                         </Menu.Item>
                         <Menu.Item key="3" >
-                            <Link to='/mobile/online'>在线提货</Link>
+                            <a href='http://www.supinshang.com'>在线提货</a>
                         </Menu.Item>
                         <Menu.Item key="4" >
                             <Link to='/mobile/contact'>联系我们</Link>

@@ -7,6 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MobileProduct from './pages/mobile/product';
 import MobileHome from './pages/mobile/home';
 import MobileLogin from './pages/mobile/login';
+import MobileShoppingBag from './pages/mobile/shoppingBag';
+import MobileList from './pages/mobile/list';
+import MContact from './pages/mobile/contact';
 
 class PageWrap extends React.Component {
 
@@ -21,9 +24,12 @@ class PageWrap extends React.Component {
           <Routes location={location} />
         </div> */}
         <Switch>
+            <Route path='/mobile/shopping_bag' component={MobileShoppingBag} />
             <Route path='/mobile/product/:name' component={MobileProduct} />
+            <Route path='/mobile/list' component={MobileList}/>
             <Route path='/mobile/index' component={MobileHome} />
             <Route path='/mobile/login' component={MobileLogin}/>
+            <Route path='/mobile/contact' component={MContact}/>
             <Route path='/pc/' component={Routes}/>
             <Redirect path="/" to="/pc/index" />
             

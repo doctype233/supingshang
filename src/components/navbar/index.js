@@ -29,9 +29,9 @@ class PageNavbar extends React.Component {
                 <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['0']} className={`header-menu`} id='bg-change'>
                     <Menu.Item key="0"><Link to='/pc/index'>首页</Link></Menu.Item>
                     <Menu.Item key="2"><Link to='/pc/product'>产品列表</Link></Menu.Item>
-                    <Menu.Item key="3"><Link to='/pc/nav3'>在线提货</Link></Menu.Item>
-                    <Menu.Item key="4"><Link to='/pc/nav4'>售后保障</Link></Menu.Item>
-                    <Menu.Item key="6"><Link to='/pc/nav6'>联系我们</Link></Menu.Item>
+                    <Menu.Item key="3"><a href='http://www.supinshang.com'>在线提货</a></Menu.Item>
+                    {/* <Menu.Item key="4"><Link to='/pc/nav4'>售后保障</Link></Menu.Item> */}
+                    <Menu.Item key="6"><Link to='/pc/contact'>联系我们</Link></Menu.Item>
                 </Menu>
             </Header>
         );

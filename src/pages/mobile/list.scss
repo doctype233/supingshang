@@ -1,0 +1,31 @@
+.m-list{
+    .m-tabs{
+       padding-top:68px;
+    .ant-tabs-nav:before{
+        border-bottom:unset;
+    }
+    .ant-tabs-tab{
+        padding:8px 0;
+    }
+    .ant-tabs-nav-list{
+        padding-left: 32px;
+        border:1px solid #000;
+        border-radius: 40px;
+    }
+    .ant-tabs-ink-bar{
+        width: 0px !important;
+    }
+    .ant-list-item{
+        padding: 15px;
+    }
+    
+}
+.m-product-list{
+    img{
+        height:80px;
+    }
+}
+.m-p-price{
+    margin-bottom: 5px;
+}
+}

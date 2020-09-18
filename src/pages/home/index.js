@@ -18,7 +18,6 @@ class Home extends React.Component {
         }
     }
     componentDidMount(){
-        var header=$('#bg-change');
 
         var child = document.getElementById("company-about-child");
         var parent = document.getElementById("company-about");
@@ -39,8 +38,8 @@ class Home extends React.Component {
             var dTop = $(document).scrollTop();//滚动高度
             var watchHeight=document.documentElement.clientHeight; //可视区高度
 
-            var cTop = $('#company-about').offset().top;
-            var gTop = $('#group-appreciation').offset().top;
+            var cTop = $('#company-about').offset()?.top;
+            var gTop = $('#group-appreciation').offset()?.top;
 
             if (dTop>=cTop+h-watchHeight) {
 
@@ -53,9 +52,6 @@ class Home extends React.Component {
                 this.setState({
                     show1:true
                 })
-            }
-            if(dTop>300){
-                header.addClass('show-bg')
             }
         }
     }

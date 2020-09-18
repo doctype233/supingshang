@@ -18,7 +18,7 @@ class FootInfo extends React.Component {
                     <div>
                         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['']} id='foot-menu'>
                             <Menu.Item key="0"><Link to='/index'>首页</Link></Menu.Item>
-                            <Menu.Item key="4"><Link to='/nav6'>联系我们</Link></Menu.Item>
+                            <Menu.Item key="4"><Link to='/pc/contact'>联系我们</Link></Menu.Item>
                         </Menu>
                     </div>
                 </div>

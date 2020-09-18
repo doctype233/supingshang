@@ -3,7 +3,21 @@
     background-position: center;
     background-size: cover;
     height: 100%;
+    text-align: center;
+
     .m-login-logo{
-        width:40%;
+        margin: 50px 0;
+        height: 100px;
+    }
+    .form-box{
+        padding: 0 20px;
+    }
+    .login-form-button{
+        width: 100%;
+        
+    }
+    .validate-box{
+        margin-top:-15px;
+        margin-bottom: 15px;
     }
 }
