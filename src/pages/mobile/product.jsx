@@ -1,6 +1,7 @@
 import React from 'react';
 import MHeader from './header';
 import MFooter from './footer';
+import {withRouter} from 'react-router-dom';
 import { Input, Button, Row, Col, Typography } from 'antd';
 import { MinusOutlined, PlusOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { product_list } from '../../utils/utils';
@@ -70,6 +71,9 @@ class MobileProduct extends React.Component {
     onChange(e) {
         this.setState({ count: e.currentTarget.value })
     }
+    buy(){
+        this.props.history.push('/mobile/buy')
+    }
     render() {
         const { count, product, num } = this.state;
         return (
@@ -87,7 +91,7 @@ class MobileProduct extends React.Component {
                     </Col>
                     <Col>
                         <Row>
-                            <Col> <Button type="primary" shape="round" icon={<ShoppingCartOutlined />} >买礼卡</Button></Col>
+                            <Col> <Button type="primary" shape="round" icon={<ShoppingCartOutlined />} onClick={this.buy.bind(this)}>买礼卡</Button></Col>
                         </Row>
                     </Col>
                 </Row>
@@ -127,4 +131,4 @@ class MobileProduct extends React.Component {
     }
 }
 
-export default MobileProduct;
+export default withRouter(MobileProduct);

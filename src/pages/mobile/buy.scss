@@ -1,0 +1,26 @@
+.buy-box{
+    padding:75px 15px 0px;
+    button{
+        vertical-align: middle;
+        .anticon{
+            margin-bottom: 4px;
+        }
+    }
+    
+    .m-del{
+        padding:0 10px;
+        margin-left: 10px;
+    }
+    .buy-title{
+        margin-top: 28px;
+    }
+}
+.info-item{
+    width: 100%;
+    padding: 0 15px;
+}
+.info-footer{
+    height:60px;
+    padding:10px 15px;
+    background-color: #eee;
+}

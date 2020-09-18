@@ -10,9 +10,10 @@ import MobileLogin from './pages/mobile/login';
 import MobileShoppingBag from './pages/mobile/shoppingBag';
 import MobileList from './pages/mobile/list';
 import MContact from './pages/mobile/contact';
+import MobileBuy from './pages/mobile/buy';
+
 
 class PageWrap extends React.Component {
-
   render() {
     const { history, location } = this.props;
     return (
@@ -25,6 +26,7 @@ class PageWrap extends React.Component {
         </div> */}
         <Switch>
             <Route path='/mobile/shopping_bag' component={MobileShoppingBag} />
+            <Route path='/mobile/buy' component={MobileBuy}/>
             <Route path='/mobile/product/:name' component={MobileProduct} />
             <Route path='/mobile/list' component={MobileList}/>
             <Route path='/mobile/index' component={MobileHome} />
