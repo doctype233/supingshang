@@ -124,6 +124,7 @@ class MobileProduct extends React.Component {
                 <div className='content-img img1'></div>
                 <div className='content-img img2'></div>
                 <div className='content-img img3'></div>
+                <img className='content-img img4' src={require('../../assets/images/detail4.png')} alt=''/>
                 <MFooter/>
             </div>
 

@@ -24,6 +24,9 @@ class MobileList extends React.Component {
         return ( 
             <div className='m-list'>
                 <MHeader bg='#000'/>
+                <div>
+                    <img src={require('../../assets/images/product-list-banner.png')} alt='' className='banner'/>
+                </div>
                 <Tabs defaultActiveKey="1" centered className='m-tabs'>
                     <TabPane tab="豪华四对装" key="1" className='divider'>
                         <List itemLayout="horizontal" dataSource={product_list}

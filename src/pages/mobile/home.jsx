@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Row, Col, Tabs, List,Typography} from 'antd';
+import { Row, Col, Tabs, List,Typography} from 'antd';
 import {withRouter} from 'react-router-dom';
 import banner1 from '../../assets/images/m-banner1.jpg';
 import img1 from '../../assets/images/n8-1.jpg';
@@ -26,24 +26,15 @@ class MobileHome extends React.Component {
         return (
             <div className='m-home'>
                 <MHeader bg='#000' />
-                <Carousel autoplay dotPosition='bottom' className='carousel'>
-                    <div>
-                        <img src={banner1} />
+                <div className='carousel'>
+                        <img src={banner1} alt=''/>
                     </div>
-                    <div>
-                        <img src={banner1} />
-                    </div>
-                    <div>
-                        <img src={banner1} />
-                    </div>
-                    <div>
-                        <img src={banner1} />
-                    </div>
-                </Carousel>
                 <Row className='itop'>
                     <Col className='img-box'><img src={img1} alt='定制' /></Col>
                     <Col className='img-box'><img src={img2} alt='提货' /></Col>
                 </Row>
+                <img src={require('../../assets/images/m-img2.png')} alt='' className='content-bg'/>
+                <img src={require('../../assets/images/m-img3.png')} alt='' className='content-bg'/>
                 <img src={text} alt='规格选择' className='guige' />
                 <Tabs defaultActiveKey="1" centered className='m-tabs'>
                     <TabPane tab="豪华四对装" key="1" className='divider'>

@@ -11,7 +11,7 @@ import MobileShoppingBag from './pages/mobile/shoppingBag';
 import MobileList from './pages/mobile/list';
 import MContact from './pages/mobile/contact';
 import MobileBuy from './pages/mobile/buy';
-
+import MService from './pages/mobile/service';
 
 class PageWrap extends React.Component {
   render() {
@@ -32,6 +32,7 @@ class PageWrap extends React.Component {
             <Route path='/mobile/index' component={MobileHome} />
             <Route path='/mobile/login' component={MobileLogin}/>
             <Route path='/mobile/contact' component={MContact}/>
+            <Route path='/mobile/service' component={MService}/>
             <Route path='/pc/' component={Routes}/>
             <Redirect path="/" to="/pc/index" />
             
