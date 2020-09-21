@@ -3,7 +3,7 @@ import './login.scss';
 import { Form, Input,Button,message,Row,Col } from 'antd';
 import {withRouter} from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
-import {URL} from '../../utils/config';
+// import {URL} from '../../utils/config';
 import {_POST} from '../../utils/request';
 import axios from 'axios';
 
@@ -23,7 +23,17 @@ class MLogin extends React.Component {
         if(values.code===undefined){
             message.error('验证码为空，请重填！');
         }else{
-            this.props.history.push('/mobile/index')
+            let data=new FormData();
+            let cookie=localStorage.getItem('cookie');
+            data.append('telephone',values.phone);
+            data.append('sign_no',values.code)
+            axios.post('/api/pdaapi/Login/login',data).then(res=>{
+                console.log(res)
+                if(res.data.code===200){
+                    this.props.history.push('/mobile/index');
+                    localStorage.setItem('isLogin',true)
+                }
+            })
         }
     };
     onClick(){
@@ -42,7 +52,17 @@ class MLogin extends React.Component {
         // _POST(URL.sendCode,{telephone:tel}).then(res=>{
         //     console.log(res)
         // })
-        axios.post('/api/pdaapi/Sign/send_sign').then(res=>{
+        let data=new FormData();
+        data.append('telephone',tel);
+        var config = {
+            method: 'post',
+            url: '/api/pdaapi/Sign/send_sign',
+            // headers: { 
+             
+            // },
+            data : data
+          };
+        axios(config).then(res=>{
             console.log(res)
         })
     }
