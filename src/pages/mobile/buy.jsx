@@ -8,7 +8,8 @@ class MobileBuy extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [],
+            data: [{ text: '',
+            value: "0"}],
             count: 1,
             info: [{
                 text: '优惠券',
@@ -22,6 +23,8 @@ class MobileBuy extends React.Component {
             total: 0,
             initAddress:'您当前没有收货地址，请添加',
             address: '',
+            name:'',
+            tel:'',
             visible: false
         }
     }
@@ -68,9 +71,32 @@ class MobileBuy extends React.Component {
             visible: false,
         });
     };
+    onChange(e){
+        console.log(e.currentTarget);
+        let v=e.currentTarget.value;
+        if(e.currentTarget.id==='name'){
+            this.setState({
+                name:v
+            })
+        }
+        if(e.currentTarget.id==='tel'){
+            this.setState({
+                tel:v
+            })
+        }
+        if(e.currentTarget.id==='address'){
+            this.setState({
+                address:v
+            })
+        }
+        
+    }
+    del(){
+        
+    }
     render() {
-        const { data, count, info, total,address,initAddress } = this.state;
-
+        const { data, count, info, total,address,name,tel,initAddress } = this.state;
+        let add=address+" "+name+" "+tel;
         const des = <Row justify="space-between">
             <Col>¥658 x {count}</Col>
             <Col>
@@ -81,7 +107,7 @@ class MobileBuy extends React.Component {
                             <Button onClick={this.increase} icon={<PlusOutlined style={{ fontSize: 10 }} />} />
                         </Button.Group>
                     </Col>
-                    <Col className='m-del'>
+                    <Col className='m-del' onClick={this.del.bind(this)}>
                         <DeleteOutlined style={{ fontSize: 16, color: '#f5222d' }} />
                     </Col>
                 </Row>
@@ -93,7 +119,7 @@ class MobileBuy extends React.Component {
                 <div className='buy-box'>
                     <Row justify='center'>
                         <Col>
-                            <Button type='dashed' onClick={this.address.bind(this)}>{address||initAddress}<PlusSquareOutlined style={{ verticalAlign: 'middle', fontSize: 15 }} /></Button>
+                            <Button type='dashed' onClick={this.address.bind(this)}>{add.length<3?initAddress:add}<PlusSquareOutlined style={{ verticalAlign: 'middle', fontSize: 15 }} /></Button>
                         </Col>
                     </Row>
                     <h4 className='ant-list-item-meta-title buy-title'>商品清单:</h4>
@@ -136,12 +162,16 @@ class MobileBuy extends React.Component {
                     </Row>
                 </div>
                 <Modal
-                    title="请输入收货地址"
+                    title="请填写收货信息"
                     visible={this.state.visible}
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
-                >
-                    <Input value={address} placeholder='请输入收货地址'/>
+                    className='buy-modal'
+                >   
+                    <Input value={name} placeholder='收件人姓名' id='name' onChange={this.onChange.bind(this)}/>
+                    {''}
+                    <Input value={tel} placeholder='收件人电话' id='tel' onChange={this.onChange.bind(this)}/>
+                    <Input value={address} placeholder='收货地址' id='address' onChange={this.onChange.bind(this)}/>
                 </Modal>
             </div>
         );

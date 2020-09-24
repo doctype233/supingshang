@@ -80,7 +80,7 @@ class MHeader extends React.Component {
                         <Menu.Item key="4" >
                             <Link to='/mobile/contact'>联系我们</Link>
                         </Menu.Item>
-                        <Menu.Item key="4" >
+                        <Menu.Item key="5" >
                             <Link to='/mobile/service'>售后服务</Link>
                         </Menu.Item>
                     </Menu>
