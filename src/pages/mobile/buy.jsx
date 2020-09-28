@@ -3,6 +3,8 @@ import MHeader from './header';
 import { Button, Row, Col, List,Modal ,Input} from 'antd';
 import './buy.scss';
 import { PlusSquareOutlined, MinusOutlined, PlusOutlined, DeleteOutlined } from '@ant-design/icons';
+import axios from 'axios';
+
 
 class MobileBuy extends React.Component {
     constructor(props) {
@@ -36,6 +38,13 @@ class MobileBuy extends React.Component {
         ]
         this.setState({
             data
+        })
+        // this.getAddressList();
+
+    }
+    getAddressList(){
+        axios.post('/api/pdaapi/index/get_address_list').then(res=>{
+            console.log(res)
         })
     }
     address() {

@@ -12,40 +12,14 @@ const { Title, Paragraph } = Typography;
 
 
 class GroupAppreciation extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        }
-    }
-    componentDidMount() {
-        // var child = document.getElementById("group-appreciation-child");
-        // var parent = document.getElementById("group-appreciation");
-        // var h = child.offsetHeight;
-        // //将子元素的高度赋予父元素
-        // child.style.position = 'absolute';
-        // parent.style.height = 100 + h + 'px';
-        // var eTop = $('#group-appreciation').offset().top;
-        // var wTop = $(window).height();
-
-        // window.onscroll = () => {
-        //     var dTop = $(document).scrollTop();
-        //     if (dTop + wTop - 100 > eTop) {
-        //         console.log("??")
-        //         this.setState({
-        //             show: true
-        //         })
-        //     }
-        // }
-    }
-
+   
+   
 
     render() {
-        const { show } = this.props;
         return (
-
             <div id='group-appreciation'>
 
-                <div id='group-appreciation-child' className={`child-${show ? 'show' : 'hidden'}`}>
+                <div id='group-appreciation-child' className=' '>
                     <Row>
                         <Col span={12} offset={6} >
                             <Title type='warning'>上一站蟹塘，下一站咱家</Title>

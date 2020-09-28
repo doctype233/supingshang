@@ -7,20 +7,15 @@ const { Title, Paragraph } = Typography;
 
 
 class CompanyAbout extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        }
-    }
+   
 
     
     render() {
-        const {show}=this.props;
         return (
 
             <div id='company-about'>
 
-                <div id='company-about-child' className={`child-${show?'show':'hidden'}`}>
+                <div id='company-about-child' >
                     <Row>
                         <Col span={12} offset={6} >
                             <Title type='warning'>公司简介</Title>

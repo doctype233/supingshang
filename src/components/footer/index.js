@@ -17,7 +17,7 @@ class Footer extends React.Component {
             <div id='footer'>
 
                 <img src={footer_bg} alt='' className='footer-bg' />
-                <div className='footer-title'>
+                <div className='footer-title' id='foot-title'>
                     <Row>
                         <Col span={12} offset={6} >
                             <Title type='warning'>有机产品</Title>
@@ -29,8 +29,8 @@ class Footer extends React.Component {
                         </Col>
                     </Row>
                 </div>
-                <img src={left} alt='' className='left-img' />
-                <div className='right-img'>
+                <img src={left} alt='' className='left-img' id='foot-left'/>
+                <div className='right-img' id='foot-right'>
                     <img src={right} alt='' />
                     <div className='footer-content'>
                     <p>

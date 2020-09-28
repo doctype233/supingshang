@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel,BackTop} from 'antd';
+import { Carousel, BackTop } from 'antd';
 import CompanyAbout from '../../components/company-about';
 import GroupAppreciation from '../../components/group-appreciation';
 import Footer from '../../components/footer';
@@ -8,60 +8,47 @@ import banner1 from '../../assets/images/banner1.jpg';
 import banner2 from '../../assets/images/banner2.jpg';
 import './index.scss';
 import $ from 'jquery';
+import "animate.css";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+
 
 class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show:false,
-            show1:false,
+
         }
     }
-    componentDidMount(){
-
-        var child = document.getElementById("company-about-child");
-        var parent = document.getElementById("company-about");
-
-        var group_child = document.getElementById("group-appreciation-child");
-        var group = document.getElementById("group-appreciation");
-
-        var h = child.offsetHeight;
-        var h1=group_child.offsetHeight;
-
-        //将子元素的高度赋予父元素
-        child.style.position='absolute';
-        parent.style.height =100+h+'px';
-        group_child.style.position='absolute';
-        group.style.height =100+h1+'px';
+    componentDidMount() {
 
         window.onscroll = () => {
-            var dTop = $(document).scrollTop();//滚动高度
-            var watchHeight=document.documentElement.clientHeight; //可视区高度
-
-            var cTop = $('#company-about').offset()?.top;
-            var gTop = $('#group-appreciation').offset()?.top;
-
-            if (dTop>=cTop+h-watchHeight) {
-
-                this.setState({
-                    show:true
-                })
-            }
-            if (dTop>=gTop+h1-watchHeight) {
-                console.log(dTop,gTop,h1,watchHeight)
-                this.setState({
-                    show1:true
-                })
-            }
+            this.moves($('#group-appreciation'), 'animate__animated animate__fadeInUp')
+            this.moves($('#company-about'), 'animate__animated animate__fadeInUp');
+            this.moves($('#foot-left'), 'animate__animated animate__fadeInLeft');
+            this.moves($('#foot-right'), 'animate__animated animate__fadeInRight');
+            this.moves($('#foot-title'), 'animate__animated animate__fadeIn');
+            this.moves($('#phone'), 'animate__animated animate__flipInX');
         }
     }
-
-
+    moves(ele, movename) {
+        let a, b, c, d;
+        a = ele.offset().top;
+        b = ele.offset().height;
+        c = $(window).scrollTop();
+        d = $(window).height();
+        if (d + c > a) {
+            ele.addClass(movename);
+        } else {
+            ele.removeClass(movename);
+        }
+    }
+    componentWillUnmount(){
+        window.removeEventListener()
+    }
     render() {
-        const {show,show1}=this.state;
         return (
             <div>
-                <div id='banner'>
+                <div id='banner' >
                     <Carousel autoplay dotPosition='bottom' className='carousel'>
                         <div>
                             <img src={banner1} />
@@ -78,13 +65,12 @@ class Home extends React.Component {
                     </Carousel>
 
                 </div>
-                <CompanyAbout show={show}/>
-                <GroupAppreciation  show={show1}/>
-                <Footer/>
+                <CompanyAbout />
+                <GroupAppreciation />
+                <Footer />
                 <FootInfo />
                 <BackTop />
             </div>
-
         );
     }
 }

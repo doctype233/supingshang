@@ -26,7 +26,7 @@ class FootInfo extends React.Component {
                 <div className='flex-between sub'>
                     <div>
                        <h4 className='subtitle'>官方客服电话</h4>
-                        <Title level={2} type="warning">4006902019/15212973333</Title>
+                        <Title level={2} type="warning" id='phone'>4006902019/15212973333</Title>
                     </div>
                     <div className='sub-right'>
                         <img  src={img1} alt='wechat1'/>

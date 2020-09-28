@@ -17,7 +17,11 @@ class MHeader extends React.Component {
             isLogin: localStorage.getItem('isLogin')
         }
     }
-   
+   checkLogin(){
+        axios.post('/api/pdaapi/Index/check_user').then(res=>{
+            console.log(res);
+        })
+   }
     toggleCollapsed = () => {
         this.setState({
             collapsed: !this.state.collapsed,
@@ -45,8 +49,9 @@ class MHeader extends React.Component {
         })
     }
     render() {
-        const { collapsed, open, isLogin } = this.state;
+        const { collapsed, open } = this.state;
         const { bg, nobag } = this.props;
+        const isLogin=localStorage.getItem('isLogin');
         const account = <div className='account-menu'>
             <List>
                 <List.Item>
